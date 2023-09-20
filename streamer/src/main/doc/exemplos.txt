@@ -1,2 +1,32 @@
 SA senta na cara de VI
 SA usa chicote em VI
+
+
+Victim stats
+
+bag.initStat(StatsType.SUFFOCATION, 0);
+0 breathing without issue,
+5 starts to build despair,
+10 starts losing consciouness instead of breath
+
+bag.initStat(StatsType.ANGER, 0);
+0 not angry
+need to be over 5 to call her names or try to escape
+Affects Girl humor
+
+bag.initStat(StatsType.AROUSAL, 0);
+At 5 will have trouble resisting
+at 10 is incapable of disobeying
+
+bag.initStat(StatsType.ORGASM, 0);
+10 is an orgasm. Girl will almost always be able to stop reaching 10
+
+bag.initStat(StatsType.PAIN, 0);
+At 5 will have trouble resisting
+at 10 is incapable of disobeying
+
+bag.initStat(StatsType.FEAR, 0);
+affected by PAIN, PANIC, SUFFOCATION
+
+bag.initStat(StatsType.PANIC, 0);
+bag.initStat(StatsType.UNCONSCIOUSNESS, 0);

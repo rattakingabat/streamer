@@ -1,9 +1,11 @@
 package com.github.rattakingabat.streamer.action;
 
-import com.github.rattakingabat.streamer.actor.Person;
+import com.github.rattakingabat.streamer.person.Person;
 
 public interface Action<ORIG extends Person, TARGET extends Person> {
-    ORIG getOriginator();
-    TARGET getTarget();
+    ORIG originator();
+    TARGET target();
+
+    void execute();
 
 }

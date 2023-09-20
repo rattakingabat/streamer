@@ -1,13 +1,18 @@
 package com.github.rattakingabat.streamer.action;
 
-import com.github.rattakingabat.streamer.actor.Girl;
-import com.github.rattakingabat.streamer.actor.Victim;
-import lombok.Value;
+import com.github.rattakingabat.streamer.person.Girl;
+import com.github.rattakingabat.streamer.person.Victim;
+import com.github.rattakingabat.streamer.stance.FaceSat;
+import com.github.rattakingabat.streamer.stance.FaceSitting;
 
-@Value
-public class Facesits implements Action<Girl, Victim> {
+public record Facesits(Girl originator, Victim target) implements Action<Girl, Victim> {
 
-    Girl originator;
-    Victim target;
+    @Override
+    public void execute() {
+        FaceSitting facesitting = new FaceSitting(originator, this, target);
+        FaceSat facesat = facesitting.getFaceSat();
 
+        originator.giveStance(facesitting);
+        target.receiveStance(facesat);
+    }
 }
